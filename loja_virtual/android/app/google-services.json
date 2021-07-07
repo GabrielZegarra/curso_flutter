@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "865128373531",
+    "project_id": "loja-virtual---android",
+    "storage_bucket": "loja-virtual---android.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:865128373531:android:73d86775e9498444a6c7be",
+        "android_client_info": {
+          "package_name": "br.com.zegarra.lojavirtual.loja_virtual"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "865128373531-2vbi92a8b1a373j9ejb81fc8g16uhqhp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkrKFk10b_L399dQ9hwYDZHjcdh_sgXz8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "865128373531-2vbi92a8b1a373j9ejb81fc8g16uhqhp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

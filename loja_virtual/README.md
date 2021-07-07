@@ -1,6 +1,6 @@
 # loja_virtual
 
-loja virtual curso flutter
+Loja virtual curso flutter
 
 ## Getting Started
 
