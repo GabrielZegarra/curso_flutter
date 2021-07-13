@@ -5,6 +5,8 @@ import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:transparent_image/transparent_image.dart';
 
 class HomeTab extends StatelessWidget {
+
+
   @override
   Widget build(BuildContext context) {
     Widget _buildBodyBack() => Container(
@@ -19,7 +21,7 @@ class HomeTab extends StatelessWidget {
           ),
         );
 
-    return Stack(
+    return Stack (
       children: <Widget>[
         _buildBodyBack(),
         CustomScrollView(
@@ -34,8 +36,8 @@ class HomeTab extends StatelessWidget {
                 centerTitle: true,
               ),
             ),
-            FutureBuilder<QuerySnapshot>(
-                future: Firestore.instance.collection("home").orderBy("pos").getDocuments(),
+            FutureBuilder<QuerySnapshot> (
+                future:  FirebaseFirestore.instance.collection("home").orderBy("pos").get(),
                 builder: (context, snapshot){
                   if (!snapshot.hasData)
                     return SliverToBoxAdapter(
@@ -53,14 +55,14 @@ class HomeTab extends StatelessWidget {
                       crossAxisCount: 2,
                       mainAxisSpacing: 1.0,
                       crossAxisSpacing: 1.0,
-                      staggeredTiles: snapshot.data!.documents.map(
+                      staggeredTiles: snapshot.data!.docs.map(
                         (doc){
-                        return StaggeredTile.count(doc.data["x"], doc.data["y"]);
+                        return StaggeredTile.count(doc.get("x"), doc.get("y"));
                       }).toList(),
-                      children: snapshot.data!.documents.map((doc) {
+                      children: snapshot.data!.docs.map((doc) {
                         return FadeInImage.memoryNetwork(
                           placeholder: kTransparentImage,
-                          image: doc.data["image"],
+                          image: doc.get("image"),
                           fit: BoxFit.cover,
                         );
                       }).toList(),
